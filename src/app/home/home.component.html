@@ -81,25 +81,52 @@
         <hr style="width: 100%;">
     </div>
 
-    <div id="designproject">
+    <!-- <div id="designproject">
         <div class="designheader">
            <p>UI UX DESIGN PROJECT</p>
            <span class="designarrowbuttons">
-            <img (click)="scrollLeft()" src="/assets/leftarrow.svg">
-            <img (click)="scrollRight()" src="/assets/rightarrow.svg">
+            <img (click)="moveLeft()" src="/assets/leftarrow.svg">
+            <img (click)="moveRight()" src="/assets/rightarrow.svg">
            </span>
         </div>
         <div class="desginprojectcontainer" >
-        <div class="desginprojectsec" *ngFor="let project of visibleProjects">
-        <img src="project.imageUrl">
+        <div class="desginprojectsec" *ngFor="let card of visibleCards">
+        <img [src]="card.imageUrl">
         <span>
-            <p class="designprojectname">{{ project.title }}</p>
-            <p class="designprojectname1">{{ project.subtitle }}</p>
+            <p class="designprojectname">{{ card.title }}</p>
+            <p class="designprojectname1">{{ card.subtitle }}</p>
         </span>
         </div>
-
         </div>
+        
+    </div> -->
+    <div id="desisnprojectcont">
+    <app-showproject [sectionTitle]="'Design Projects'" [cards]="designProjects"></app-showproject>
     </div>
+  <div id="frontendprojectcont">
+    <app-showproject [sectionTitle]="'Frontend Projects'" [cards]="frontendProjects"></app-showproject>
+</div>
+
+
+    <!-- <div id="frontendproject">
+        <div class="designheader">
+           <p>UI UX DESIGN PROJECT</p>
+           <span class="designarrowbuttons">
+            <img (click)="moveLeft()" src="/assets/leftarrow1.svg">
+            <img (click)="moveRight()" src="/assets/rightarrow1.svg">
+           </span>
+        </div>
+        <div class="desginprojectcontainer" >
+        <div class="desginprojectsec" *ngFor="let card of visibleCards">
+        <img [src]="card.imageUrl">
+        <span>
+            <p class="designprojectname">{{ card.title }}</p>
+            <p class="designprojectname1">{{ card.subtitle }}</p>
+        </span>
+        </div>
+        </div>
+        
+    </div> -->
 
     <div id="aboutsec">
         <p class="abouthead">Connect</p>

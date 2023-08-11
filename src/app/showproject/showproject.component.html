@@ -1,0 +1,17 @@
+<div id="projectcont">
+    <div class="projectheader">
+       <p>{{ sectionTitle }}</p>
+       <span class="projectarrowbuttons">
+        <img (click)="moveLeft()" src="/assets/leftarrow.svg">
+        <img  (click)="moveRight()" src="/assets/rightarrow.svg">
+       </span>
+    </div>
+    <div class="projectcontainer" >
+        <app-card *ngFor="let card of visibleCards" [imageUrl]="card.imageUrl" [title]="card.title" [subtitle]="card.subtitle"></app-card>
+    </div>
+    
+</div>
+
+
+
+  

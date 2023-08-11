@@ -237,7 +237,7 @@ font-weight: 400;
 .desginprojectsec img{
     width:100%;
     height:100%;
-    /* border: 1px solid white; */
+   
 }
 .designprojectname{
     color: #1B1919;
@@ -276,5 +276,25 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: 12px;
-background: #F9F4F5;
+background:#F9F4F5;
+}
+
+#desisnprojectcont{
+    display: flex;
+    padding: 6vw 37vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 31px;
+    background: #70587C;
+}
+
+#frontendprojectcont{
+    display: flex;
+    padding: 6vw 37vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 31px;
+    background: #000000;
 }
