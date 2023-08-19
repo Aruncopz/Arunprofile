@@ -236,17 +236,17 @@ body {
 @media (max-width: 767px) {
   #heropage {
     background-image: url("./heroimg.svg");
-    width: 100vw;
+    width: auto;
     height: 80vh;
     background-size: cover;
     background-position: center;
     display: flex;
     /* justify-content: space-between;
         align-items: center; */
-    padding: 3vw;
+    padding: 4vw;
   }
   #logonav {
-    width: 100vw;
+    width: auto;
     height: 100%;
     /* border: 1px solid white; */
   }
@@ -255,15 +255,15 @@ body {
     gap: 8px;
   }
   .logofont {
-    font-size: 12px;
+    font-size: 14px;
   }
   .logoimg img {
     width: 20px;
     height: 20px;
   }
   .netwrok img {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
   .netwrok {
     display: flex;
@@ -274,7 +274,7 @@ body {
     /* border: 1px solid white; */
   }
   #herocont {
-    width: 100vw;
+    width: auto;
     height: 100%;
     /* border: 1px solid white; */
     gap: 12px;
@@ -289,45 +289,47 @@ body {
     font-size: 18px;
   }
   #sidemenu {
-    width: 100vw;
+    width: auto;
     height: 100%;
-    align-items: center;
+    align-items: end;
     gap: 7px;
+    /* border: 1px solid white; */
   }
   .sidemenucont {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   #aboutsec {
-    padding: 7vw 3vw;
+    padding: 7vw 4vw;
     gap: 9px;
   }
   .abouthead {
-    font-size: 12px;
+    font-size: 14px;
   }
   .aboutcont {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
+    line-height: 150%;
   }
   #experiencesec {
-    padding: 7vw 3vw;
+    padding: 7vw 4vw;
     gap: 9px;
   }
   #worksec {
-    padding: 7vw 3vw;
+    padding: 7vw 4vw;
     gap: 10px;
   }
   .workhead {
-    font-size: 12px;
-  }
-  .experiencecont1 {
-    font-size: 16px;
-  }
-  .experiencecont2 {
     font-size: 14px;
   }
+  .experiencecont1 {
+    font-size: 18px;
+  }
+  .experiencecont2 {
+    font-size: 16px;
+  }
   .experiencecont3 {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .conect {
@@ -354,8 +356,8 @@ body {
     /* border: 1px solid white; */
   }
   .conect img {
-    height: 14px;
-    width: 14px;
+    height: 16px;
+    width: 16px;
   }
   .conectlogo {
     width: 80%;
@@ -389,11 +391,11 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   #heropage {
     background-image: url("./hero-tab.svg");
-    width: 100vw;
+    width: auto;
     height: 100vh;
     background-size: cover;
     background-position: center;
-    padding: 3vw;
+    padding: 4vw;
   }
   /* #logonav {
     width: 100vw;
@@ -410,8 +412,8 @@ body {
     height: 28px;
   }
   .netwrok img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
   /* .netwrok {
     display: flex;
@@ -438,7 +440,7 @@ body {
   #sidemenu {
     /* width: 100vw;
     height: 100%; */
-    align-items: center;
+    align-items: end;
     gap: 7px;
   }
   .sidemenucont {
@@ -454,7 +456,7 @@ body {
   }
   .aboutcont {
     font-size: 20px;
-    /* font-weight: 300; */
+    line-height: 180%;
   }
   #experiencesec {
     padding: 10vw 10vw;
@@ -521,11 +523,11 @@ body {
 @media (min-width: 1024px) and (max-width: 1439px) {
   #heropage {
     background-image: url("./hero-lap.svg");
-    width: 100vw;
+    width: auto;
     height: 100vh;
     background-size: cover;
     background-position: center;
-    padding: 3vw 3vh;
+    padding: 4vw;
   }
 
   .logo {
@@ -556,7 +558,7 @@ body {
     font-size: 52px;
   }
   #sidemenu {
-    align-items: center;
+    align-items: end;
     gap: 8px;
     /* border: 1px solid white; */
   }
@@ -572,7 +574,7 @@ body {
   }
   .aboutcont {
     font-size: 22px;
-    /* font-weight: 300; */
+    line-height: 180%;
   }
   #experiencesec {
     padding: 10vw 10vw;

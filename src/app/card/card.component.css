@@ -35,9 +35,9 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 320px) {
   .projectsec {
-    width: 148px;
+    width: 146px;
   }
 
   .projectname {
@@ -50,6 +50,18 @@ a {
     height: 35px;
     padding: 10px 0px;
     line-height: 7%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 376px) {
+  .projectsec {
+    width: 172px;
+  }
+}
+
+@media (min-width: 377px) and (max-width: 767px) {
+  .projectsec {
+    width: 197px;
   }
 }
 

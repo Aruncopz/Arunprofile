@@ -18,6 +18,7 @@ export interface Card {
 })
 export class ShowprojectComponent {
   
+ 
 
 
   viewportWidth: number;
@@ -35,7 +36,7 @@ export class ShowprojectComponent {
 
   updateVariablesBasedOnViewport(): void {
     if (this.viewportWidth <= 768) {
-      this.visibleCardsCount = 3; // For small screens, show 2 cards
+      this.visibleCardsCount = 2; // For small screens, show 2 cards
     } else if (this.viewportWidth <= 1024) {
       this.visibleCardsCount = 3; // For medium screens, show 3 cards
     } else {
@@ -55,9 +56,7 @@ export class ShowprojectComponent {
   visibleCards: Card[] = [];
   currentIndex = 0;
 
-  // ngOnInit(): void {
-  //   this.updateVisibleCards();
-  // }
+ 
 
   ngOnInit(): void {
     const storedIndex = localStorage.getItem('currentCardIndex');
@@ -83,7 +82,22 @@ export class ShowprojectComponent {
     }
   }
 
-  // moveLeft(): void {
+ 
+
+  updateVisibleCards(): void {
+    this.visibleCards = this.cards.slice(this.currentIndex, this.currentIndex + this.visibleCardsCount);
+  }
+
+  
+
+}
+
+ // ngOnInit(): void {
+  //   this.updateVisibleCards();
+  // }
+
+
+ // moveLeft(): void {
   //   if (this.currentIndex > 0) {
   //     this.currentIndex--;
   //     this.updateVisibleCards();
@@ -96,14 +110,3 @@ export class ShowprojectComponent {
   //     this.updateVisibleCards();
   //   }
   // }
-
-  updateVisibleCards(): void {
-    this.visibleCards = this.cards.slice(this.currentIndex, this.currentIndex + this.visibleCardsCount);
-  }
-
- 
- 
-
-
-}
-
