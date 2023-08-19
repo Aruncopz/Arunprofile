@@ -9,4 +9,5 @@ export class CardComponent {
   @Input() imageUrl!: string;
   @Input() title!: string;
   @Input() subtitle!: string;
+  @Input() linkUrl?: string;
 }

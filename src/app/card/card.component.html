@@ -1,7 +1,17 @@
-<div class="projectsec">
+<!-- <div class="projectsec">
     <img [src]="imageUrl">
     <span>
         <p class="projectname">{{ title }}</p>
         <p class="projectname1">{{ subtitle }}</p>
     </span>
-    </div>
+    </div> -->
+<a *ngIf="linkUrl;" [href]="linkUrl" >
+    <div class="projectsec">
+        
+          <img [src]="imageUrl">
+          <span>
+            <p class="projectname">{{ title }}</p>
+            <p class="projectname1">{{ subtitle }}</p>
+          </span>
+      </div>
+       </a>

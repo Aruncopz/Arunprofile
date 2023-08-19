@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 import { ShowprojectComponent } from './showproject/showproject.component';
+import { SkillspageComponent } from './skillspage/skillspage.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CardComponent,
-    ShowprojectComponent
+    ShowprojectComponent,
+    SkillspageComponent
   ],
   imports: [
     BrowserModule,

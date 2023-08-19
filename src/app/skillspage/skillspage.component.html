@@ -1,0 +1,23 @@
+
+  <div id="worksec">
+    <p class="workhead">What I do</p>
+    <hr style="width: 100%;background-color: #C8B8DB;">
+  
+    <div class="row" *ngFor="let content of contentData; let i = index"
+         [ngClass]="{'active': activeRow === i}" (mouseenter)="setActiveRow(i)"
+         (mouseleave)="setHideContentTimer()">
+      <div class="content">
+        <ng-container *ngIf="activeRow !== i; else newContent">
+          <p class="workcont">{{ content.title }}</p>
+        </ng-container>
+        <ng-template #newContent>
+          <div class="hidden-content">
+            <p class="workcont">{{ content.title }}</p>
+            <p class="workcont1">{{ content.description }}</p>
+          </div>
+        </ng-template>
+      </div>
+      <hr style="width: 100%;background-color: #C8B8DB;">
+    </div>
+  </div>
+  

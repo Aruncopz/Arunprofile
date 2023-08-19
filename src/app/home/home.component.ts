@@ -1,5 +1,11 @@
 import { Component,ViewChild,ElementRef } from '@angular/core';
-
+// import { Card } from './card.model';
+ interface Card {
+  imageUrl: string;
+  title: string;
+  subtitle: string;
+  linkUrl: string;
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,129 +15,61 @@ import { Component,ViewChild,ElementRef } from '@angular/core';
 
 export class HomeComponent {
 
-  designProjects = [
+
+  designProjects : Card[] =  [
     {
       imageUrl: './assets/pet-delish.svg',
       title: 'Pet product design',
-      subtitle: 'UI UX design'
+      subtitle: 'UI UX design',
+      linkUrl: 'https://www.behance.net/gallery/177974217/Pet-food-online-selling-website'
+    },
+    {
+      imageUrl: './assets/ITcorp.svg',
+      title: 'IT Solution design',
+      subtitle: 'UI UX design',
+      linkUrl: 'https://www.behance.net/gallery/178003931/IT-Solution-website'
+    },
+    {
+      imageUrl: './assets/paulkaadu.svg',
+      title: 'E-commerce web design',
+      subtitle: 'Case study',
+      linkUrl: 'https://www.behance.net/gallery/165601725/UI-UX-Case-study-(Online-spices-selling-website)'
+    },
+    {
+      imageUrl: './assets/carservice.svg',
+      title: 'car service web design',
+      subtitle: 'UI UX design',
+      linkUrl: 'https://www.behance.net/gallery/168078399/Car-service-booking-website'
     },
     {
       imageUrl: './assets/washly.svg',
       title: 'Laundry app design',
-      subtitle: 'UI UX design'
+      subtitle: 'UI UX design',
+      linkUrl: 'https://www.behance.net/gallery/168078801/Laundry-booking-mobile-application'
     },
     {
       imageUrl: './assets/portfolio.svg',
       title: 'Portfolio web design',
-      subtitle: 'UI UX design'
+      subtitle: 'UI UX design',
+      linkUrl: 'https://www.behance.net/gallery/177978911/Portfolio-website'
     },
     {
-      imageUrl: './assets/pet-delish.svg',
+      imageUrl: './assets/interior-design.svg',
       title: 'Interior design',
-      subtitle: 'UI UX design'
+      subtitle: 'UI UX design',
+      linkUrl: 'https://www.behance.net/gallery/168080143/Interior-design-company-website'
     },
     {
-      imageUrl: './assets/arun.svg',
-      title: 'Interior design',
-      subtitle: 'UI UX design'
+      imageUrl: './assets/network.svg',
+      title: 'Connecting people',
+      subtitle: 'Website development',
+      linkUrl: '/https://www.behance.net/gallery/165601725/UI-UX-Case-study-(Online-spices-selling-website)'
     },
     
   ];
 
-  frontendProjects = [
-    {
-      imageUrl: './assets/pet-delish.svg',
-      title: 'Interior design',
-      subtitle: 'UX design'
-    },
-    {
-      imageUrl: './assets/washly.svg',
-      title: 'Interior design',
-      subtitle: 'UI UX design'
-    },
-    {
-      imageUrl: './assets/arun.svg',
-      title: 'Interior design',
-      subtitle: 'UI UX design'
-    },
-    {
-      imageUrl: './assets/pet-delish.svg',
-      title: 'Interior design',
-      subtitle: 'UI UX design'
-    },
-    {
-      imageUrl: './assets/arun.svg',
-      title: 'Interior design',
-      subtitle: 'UI UX design'
-    },
-  ];
 
-  // sections = [
-  //   {
-  //     title: 'Design Projects',
-  //     cards: [
-  //       {
-  //         imageUrl: './assets/pet-delish.svg',
-  //         title: 'Pet product design',
-  //         subtitle: 'UI UX design'
-  //       },
-  //       {
-  //         imageUrl: './assets/washly.svg',
-  //         title: 'Laundry app design',
-  //         subtitle: 'UI UX design'
-  //       },
-  //       {
-  //         imageUrl: './assets/portfolio.svg',
-  //         title: 'Portfolio web design',
-  //         subtitle: 'UI UX design'
-  //       },
-  //       {
-  //         imageUrl: './assets/pet-delish.svg',
-  //         title: 'Interior design',
-  //         subtitle: 'UI UX design'
-  //       },
-  //       {
-  //         imageUrl: './assets/arun.svg',
-  //         title: 'Interior design',
-  //         subtitle: 'UI UX design'
-  //       },
-  //     ],
-  //     sectionClass: 'design-section' // Apply the appropriate class for styling
-  //   },
-  //   {
-  //     title: 'Frontend Projects',
-  //     cards: [
-  //       {
-  //         imageUrl: './assets/pet-delish.svg',
-  //         title: 'Interior design',
-  //         subtitle: 'UX design'
-  //       },
-  //       {
-  //         imageUrl: './assets/washly.svg',
-  //         title: 'Interior design',
-  //         subtitle: 'UI UX design'
-  //       },
-  //       {
-  //         imageUrl: './assets/arun.svg',
-  //         title: 'Interior design',
-  //         subtitle: 'UI UX design'
-  //       },
-  //       {
-  //         imageUrl: './assets/pet-delish.svg',
-  //         title: 'Interior design',
-  //         subtitle: 'UI UX design'
-  //       },
-  //       {
-  //         imageUrl: './assets/arun.svg',
-  //         title: 'Interior design',
-  //         subtitle: 'UI UX design'
-  //       },
-  //     ],
-  //     sectionClass: 'frontend-section' // Apply the appropriate class for styling
-  //   }
-  //   // Add more sections if needed
-  // ];
-
+ 
   ngOnInit(): void {
   }
 

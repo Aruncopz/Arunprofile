@@ -42,7 +42,7 @@
         <p class="aboutcont">I am a UI/UX designer and front-end developer. I enjoy making creative designs and solving issues to improve how users experience things. I work hard and promise to give you top-notch work on time, without ever compromising on quality.</p>
     </div>
 
-    <div id="worksec">
+    <!-- <div id="worksec">
         <p class="workhead">What I do</p>
         <hr style="width: 100%;">
         <p class="workcont">UI UX Design</p>
@@ -53,7 +53,9 @@
         <hr style="width: 100%;">
         <p class="workcont">Web development</p>
         <hr style="width: 100%;">
-    </div>
+    </div> -->
+
+    <app-skillspage></app-skillspage>
 
     <div id="experiencesec">
         <p class="abouthead">Experience</p>
@@ -81,6 +83,10 @@
         <hr style="width: 100%;">
     </div>
 
+    <!-- <div class="container">
+        <app-showproject></app-showproject>
+      </div> -->
+
     <!-- <div id="designproject">
         <div class="designheader">
            <p>UI UX DESIGN PROJECT</p>
@@ -100,12 +106,12 @@
         </div>
         
     </div> -->
-    <div id="desisnprojectcont">
-    <app-showproject [sectionTitle]="'Design Projects'" [cards]="designProjects"></app-showproject>
-    </div>
-  <div id="frontendprojectcont">
+    <!-- <div id="desisnprojectcont"> -->
+    <app-showproject [sectionTitle]="'Design & development Projects'" [cards]="designProjects"></app-showproject>
+    <!-- </div> -->
+  <!-- <div id="frontendprojectcont">
     <app-showproject [sectionTitle]="'Frontend Projects'" [cards]="frontendProjects"></app-showproject>
-</div>
+</div> -->
 
 
     <!-- <div id="frontendproject">
@@ -128,20 +134,22 @@
         
     </div> -->
 
-    <div id="aboutsec">
-        <p class="abouthead">Connect</p>
+    <div id="worksec">
+        <p class="workhead">Connect</p>
 
         <div class="footercont">
 
+<span class="conectlogo">
         <div class="footercont1">
-            <span class="conect conect1"><img src="./assets/behance.svg">Behance</span>
-            <span class="conect conect1"><img src="./assets/linkedin.svg">LinkedIn</span> 
+            <span class="conect conect1"><img src="./assets/be.svg">Behance</span>
+            <span class="conect conect1"><img src="./assets/In.svg">LinkedIn</span> 
         </div>
 
         <div class="footercont2">
-            <span class="conect conect1"><img src="./assets/instagram.svg">Instagram</span>
-            <span class="conect conect1"><img src="./assets/dribbble.svg">Dribbble</span> 
+            <span class="conect conect1"><img src="./assets/Ig.svg">Instagram</span>
+            <span class="conect conect1"><img src="./assets/Dr.svg">Dribbble</span> 
         </div>
+</span>
 
         <div class="footercont3">
             <span class="emailcont">

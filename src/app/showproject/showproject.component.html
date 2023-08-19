@@ -1,17 +1,30 @@
 <div id="projectcont">
-    <div class="projectheader">
-       <p>{{ sectionTitle }}</p>
-       <span class="projectarrowbuttons">
-        <img (click)="moveLeft()" src="/assets/leftarrow.svg">
-        <img  (click)="moveRight()" src="/assets/rightarrow.svg">
-       </span>
-    </div>
-    <div class="projectcontainer" >
-        <app-card *ngFor="let card of visibleCards" [imageUrl]="card.imageUrl" [title]="card.title" [subtitle]="card.subtitle"></app-card>
-    </div>
+  <div class="projectheader">
+    <p>{{ sectionTitle }}</p>
+    <span class="projectarrowbuttons">
+      <img (click)="moveLeft()" src="/assets/leftarrow.svg" />
+      <img (click)="moveRight()" src="/assets/rightarrow.svg" />
+    </span>
+  </div>
+  <div class="projectcontainer" >
     
+    <app-card
+      *ngFor="let card of visibleCards"
+      [imageUrl]="card.imageUrl"
+      [title]="card.title"
+      [subtitle]="card.subtitle"
+      [linkUrl]="card.linkUrl"
+    >
+    </app-card>
+  
+  </div>
 </div>
 
-
-
-  
+<!-- <div class="content" (mouseenter)="toggleContent()">
+    <ng-container *ngIf="showContent">
+      <p>This is the initial content.</p>
+    </ng-container>
+    <ng-container *ngIf="!showContent">
+      <p>This is the new content.</p>
+    </ng-container>
+  </div> -->
