@@ -59,7 +59,7 @@ a {
   }
 }
 
-@media (min-width: 377px) and (max-width: 767px) {
+@media (min-width: 377px) and (max-width: 426px) {
   .projectsec {
     width: 197px;
   }
@@ -95,8 +95,8 @@ a {
     font-size: 14px;
   }
   .projectsec span {
-    height: 35px;
-    padding: 15px 0px;
+    height: 40px;
+    padding: 15px 3px;
     line-height: 7%;
   }
 }
@@ -111,10 +111,26 @@ a {
   .projectname1 {
     font-size: 18px;
   }
+  .projectsec span {
+    height: 35px;
+    padding: 35px 8px;
+    line-height: 3%;
+  }
 }
 
 @media (min-width: 1535px) {
   .projectsec {
     width: 320px;
+  }
+  .projectname {
+    font-size: 22px;
+  }
+  .projectname1 {
+    font-size: 18px;
+  }
+  .projectsec span {
+    height: 35px;
+    padding: 35px 8px;
+    line-height: 7%;
   }
 }

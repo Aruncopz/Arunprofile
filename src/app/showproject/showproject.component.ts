@@ -35,7 +35,7 @@ export class ShowprojectComponent {
   
 
   updateVariablesBasedOnViewport(): void {
-    if (this.viewportWidth <= 768) {
+    if (this.viewportWidth <= 767) {
       this.visibleCardsCount = 2; // For small screens, show 2 cards
     } else if (this.viewportWidth <= 1024) {
       this.visibleCardsCount = 3; // For medium screens, show 3 cards

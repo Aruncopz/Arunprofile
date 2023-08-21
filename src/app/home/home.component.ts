@@ -1,5 +1,6 @@
 import { Component,ViewChild,ElementRef } from '@angular/core';
-// import { Card } from './card.model';
+import { Router } from '@angular/router';
+
  interface Card {
   imageUrl: string;
   title: string;
@@ -15,6 +16,14 @@ import { Component,ViewChild,ElementRef } from '@angular/core';
 
 export class HomeComponent {
 
+  constructor(private router: Router) {}
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   designProjects : Card[] =  [
     {

@@ -11,10 +11,10 @@
     <span class="logofont">Arunkumar</span>
     </div>
     <div class="netwrok">
-        <img src="./assets/behance.svg">
-        <img src="./assets/linkedin.svg">
-        <img src="./assets/instagram.svg">
-        <img src="./assets/dribbble.svg">
+        <a href="https://www.behance.net/ruvjp"> <img src="./assets/behance.svg"></a>
+        <a href="https://www.linkedin.com/in/arun-kumar-937399254/"><img src="./assets/linkedin.svg"></a>
+        <a href="https://instagram.com/_arunvjcopzz_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><img src="./assets/instagram.svg"></a>
+        <a href="https://dribbble.com/Arunkumar_07"><img src="./assets/dribbble.svg"></a>
     </div>
     </div>
 
@@ -28,12 +28,14 @@
         <p class="herocont2">2022</p>
     </div>
 
+
     <div id="sidemenu">
-        <p class="sidemenucont">About</p>
-        <p class="sidemenucont">Experience</p>
-        <p class="sidemenucont">Projects</p>
-        <p class="sidemenucont">Contact</p>
+        <p class="sidemenucont"><a (click)="scrollToSection('aboutsec')">About</a></p>
+        <p class="sidemenucont"><a (click)="scrollToSection('experiencesec')">Experience</a></p>
+        <p class="sidemenucont"><a (click)="scrollToSection('projectsec')">Projects</a></p>
+        <p class="sidemenucont"><a (click)="scrollToSection('connectsec')">Contact</a></p>
     </div>
+
 
     </div>
 
@@ -107,7 +109,7 @@
         
     </div> -->
     <!-- <div id="desisnprojectcont"> -->
-    <app-showproject [sectionTitle]="'Design & development Projects'" [cards]="designProjects"></app-showproject>
+    <app-showproject id="projectsec" [sectionTitle]="'Design & development Projects'" [cards]="designProjects"></app-showproject>
     <!-- </div> -->
   <!-- <div id="frontendprojectcont">
     <app-showproject [sectionTitle]="'Frontend Projects'" [cards]="frontendProjects"></app-showproject>
@@ -134,20 +136,20 @@
         
     </div> -->
 
-    <div id="worksec">
+    <div id="connectsec">
         <p class="workhead">Connect</p>
 
         <div class="footercont">
 
 <span class="conectlogo">
         <div class="footercont1">
-            <span class="conect conect1"><img src="./assets/be.svg">Behance</span>
-            <span class="conect conect1"><img src="./assets/In.svg">LinkedIn</span> 
+            <a href="https://www.behance.net/ruvjp"><span class="conect conect1"><img src="./assets/be.svg">Behance</span></a>
+            <a href="https://www.linkedin.com/in/arun-kumar-937399254/"><span class="conect conect1"><img src="./assets/In.svg">LinkedIn</span> </a>
         </div>
 
         <div class="footercont2">
-            <span class="conect conect1"><img src="./assets/Ig.svg">Instagram</span>
-            <span class="conect conect1"><img src="./assets/Dr.svg">Dribbble</span> 
+            <a href="https://instagram.com/_arunvjcopzz_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><span class="conect conect1"><img src="./assets/Ig.svg">Instagram</span></a>
+            <a href="https://dribbble.com/Arunkumar_07"><span class="conect conect1"><img src="./assets/Dr.svg">Dribbble</span> </a>
         </div>
 </span>
 
