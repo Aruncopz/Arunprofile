@@ -1,112 +1,55 @@
-import { Component,ElementRef,HostListener,Input, OnInit, Renderer2, ViewChild  } from '@angular/core';
-
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 export interface Card {
   imageUrl: string;
   title: string;
   subtitle: string;
-  linkUrl: string; 
+  linkUrl: string;
 }
 
 @Component({
   selector: 'app-showproject',
   templateUrl: './showproject.component.html',
   styleUrls: ['./showproject.component.css'],
-
- 
-
 })
-export class ShowprojectComponent {
-  
- 
-
-
-  viewportWidth: number;
-
-  constructor(private renderer: Renderer2, private el: ElementRef) {
-    this.viewportWidth = window.innerWidth; // Initialize with current viewport width
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event): void {
-    this.viewportWidth = window.innerWidth;
-    this.updateVariablesBasedOnViewport(); // Call a function to update other variables
-  }
-  
-
-  updateVariablesBasedOnViewport(): void {
-    if (this.viewportWidth <= 767) {
-      this.visibleCardsCount = 2; // For small screens, show 2 cards
-    } else if (this.viewportWidth <= 1024) {
-      this.visibleCardsCount = 3; // For medium screens, show 3 cards
-    } else {
-      this.visibleCardsCount = 3; // For large screens, also show 3 cards
-    }
-
-    this.updateVisibleCards();
-  }
-
-  visibleCardsCount: number = 3;
-
-
-  @Input()
-  sectionTitle!: string;
+export class ShowprojectComponent implements OnInit {
+  @ViewChild('container') container!: ElementRef;
+  @Input() sectionTitle!: string;
   @Input() cards: Card[] = [];
+  
+  scrollAmount = 300;
+  progressPercentage: number = 0;
 
-  visibleCards: Card[] = [];
-  currentIndex = 0;
-
- 
+  constructor(private el: ElementRef) {}
 
   ngOnInit(): void {
-    const storedIndex = localStorage.getItem('currentCardIndex');
-    if (storedIndex) {
-      this.currentIndex = parseInt(storedIndex, 10);
-    }
-    this.updateVisibleCards();
+    setTimeout(() => this.updateProgress(), 0);
   }
 
   moveLeft(): void {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-      localStorage.setItem('currentCardIndex', this.currentIndex.toString());
-      this.updateVisibleCards();
-    }
+    const container = this.container.nativeElement;
+    container.scrollLeft -= this.scrollAmount;
+    this.updateProgress();
   }
-  
+
   moveRight(): void {
-    if (this.currentIndex < this.cards.length - 3) {
-      this.currentIndex++;
-      localStorage.setItem('currentCardIndex', this.currentIndex.toString());
-      this.updateVisibleCards();
+    const container = this.container.nativeElement;
+    container.scrollLeft += this.scrollAmount;
+    this.updateProgress();
+  }
+
+  onScroll(): void {
+    this.updateProgress();
+  }
+
+  updateProgress(): void {
+    const container = this.container?.nativeElement;
+    if (container) {
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      const currentScroll = container.scrollLeft;
+      this.progressPercentage = maxScroll > 0 
+        ? (currentScroll / maxScroll) * 100
+        : 100;
     }
   }
-
- 
-
-  updateVisibleCards(): void {
-    this.visibleCards = this.cards.slice(this.currentIndex, this.currentIndex + this.visibleCardsCount);
-  }
-
-  
-
 }
-
- // ngOnInit(): void {
-  //   this.updateVisibleCards();
-  // }
-
-
- // moveLeft(): void {
-  //   if (this.currentIndex > 0) {
-  //     this.currentIndex--;
-  //     this.updateVisibleCards();
-  //   }
-  // }
-
-  // moveRight(): void {
-  //   if (this.currentIndex < this.cards.length - 3) {
-  //     this.currentIndex++;
-  //     this.updateVisibleCards();
-  //   }
-  // }

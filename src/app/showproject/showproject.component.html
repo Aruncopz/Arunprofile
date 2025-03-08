@@ -6,17 +6,18 @@
       <img (click)="moveRight()" src="/assets/rightarrow.svg" />
     </span>
   </div>
-  <div class="projectcontainer" >
-    
+  <div class="projectcontainer" #container (scroll)="onScroll()">
     <app-card
-      *ngFor="let card of visibleCards"
+      *ngFor="let card of cards"
       [imageUrl]="card.imageUrl"
       [title]="card.title"
       [subtitle]="card.subtitle"
       [linkUrl]="card.linkUrl"
     >
     </app-card>
-  
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar" [style.width.%]="progressPercentage"></div>
   </div>
 
   
